@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--
+		rcg v0.html
+		Written by Garet Robertson
+		https://goo.gl/ACzHsN
+		garetethan@gmail.com
+		
+		Created on 2016 October 30.
+		Last modified on 2016 November 13.
+		
+		This simple page is designed simply to generate a random RGB value, and show the resulting colour (along with the RGB values in a few different forms) to the user. I created it primarily to generate random RGB values for the background colour of the table that I use in the Schedule OneNote page.
+		-->
+		<title>Random Colour Generator</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../main.css"/>
+		<script src="rcg.js"></script>
+	</head>
+	<body>
+		<h1>Random Colour Generator</h1>
+			<p>This page will generate a random RGB value, and then show you the colour that it represents.</p>
+			<button onclick="generate()" autofocus>Generate new values</button>
+			<button onclick="brighter()">Make current colour brighter</button>
+			<button onclick="darker()">Make current colour darker</button>
+			<br>
+			<svg width="150" height="150">
+				<rect id="colourSquare" width="150" height="150">
+			</svg>
+			<h2>RGB</h2>
+				<p id="rgbValues">0, 0, 0</p>
+			<h2>Hexadecimal</h2>
+				<p id="hexValues">000000</p>
+			<script>generate();</script>
+	</body>
+</html>
