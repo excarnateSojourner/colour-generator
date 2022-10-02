@@ -1,9 +1,9 @@
 /*
-Created on 2017 January 14.
-Last modified on 2021-05-17.
-
-This is the JavaScript behind the Random Colour Generator page. It is responsible for generating the random numbers, and inserting them into the page in different forms.
+Created on 2017-01-14.
+Last modified on 2022-10-02.
 */
+
+const BRIGHTENING_FACTOR = 1.2;
 
 // Generates a random colour and updates the page with it.
 function generate() {
@@ -16,7 +16,7 @@ function generate() {
 // Takes the current colour, makes it brighter, and updates the page with the new, brighter colour.
 function brighter() {
 
-	let brighterRgb = readRgb().map(val => Math.ceil(val + (255 - val) * 0.2));
+	let brighterRgb = readRgb().map(val => Math.min(Math.ceil(val * BRIGHTENING_FACTOR), 255));
 
 	displayRgb(brighterRgb);
 }
@@ -25,7 +25,7 @@ function brighter() {
 function darker() {
 
 	// Decrease all values, making sure not to subceed the min
-	let darkerRgb = readRgb().map(val => Math.floor(val * 0.8));
+	let darkerRgb = readRgb().map(val => Math.floor(val / BRIGHTENING_FACTOR));
 
 	displayRgb(darkerRgb);
 }
