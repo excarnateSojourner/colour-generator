@@ -1,14 +1,8 @@
 /*
-	Random Colour Generator
-	rcg.js
-	Written by Garet Robertson
-	https://goo.gl/ACzHsN
-	garetethan@gmail.com
-	
-	Created on 2017 January 14.
-	Last modified on 2017 January 14.
-	
-	This is the JavaScript behind the Random Colour Generator page. It is responsible for generating the random numbers, and inserting them into the page in different forms.
+Created on 2017 January 14.
+Last modified on 2017 January 14.
+
+This is the JavaScript behind the Random Colour Generator page. It is responsible for generating the random numbers, and inserting them into the page in different forms.
 */
 
 // Generates a random colour and updates the page with it.
